@@ -1,16 +1,115 @@
-Background
+Background 
 
-  Iris E. Jansen et al. 2019 assembled the genome of Homo sapiens studying Alzheimer's disease where we compared it to
-  
+  Jansen Iris E., et al. 2019 assembled the genome of Homo sapiens studying new loci and functional pathways that influence risk of Alzheimer's disease where we compared Manhattan plots to chromosomes and important snips.
+ 
 Methods
-   Author et al. 2019 sequences we downloaded from ...
+   Jansen Iris E., et al. 2019 sequences were downloaded from a summary statistical file, Genome-wide meta-analysis identifies new loci and functional pathways influencing Alzheimer’s disease risk.
 
-  Our files were in fastqz
+   Our files were in txt.gz format
 
-  We installed RStudio programs with a conda environment
+   RStudio programs were downloaded with a conda environment and Manhattan plots for all 22 chromosomes (that the stats file provided) were created. The commands used to separate the summary statistics file by chromosome are shown below. More specifically, VS code was used to separate the summary statistics file into 22 individual files, and RStudio was used to create the Manhattan plots.
 
-  We ran our analysis on a laptop...
+   In order to create each Manhattan plot, the summary statistics file was downloaded and opened in VS code. From there, a series of commands (listed below) were used in order to separate each chromosome into their respective files.
 
-  We ran into this issue
+        for chr in {1..24} ; do
+        echo $chr
+        awk -v var=$chr '$2 == var { print $0 }' > chr_$chr.tsv
+        Done
+        ##usage: awk -f sep.awk file.txt
+
+   After obtaining all 22 files, RStudio was used to make the Manhattan plots. This was done by inputting all 22 txt files into RStudio, where individual commands were run (listed below) to produce the respective Manhattan plots (all uploaded into GitHub).
+
+        plot (chr_1$X715265, -log(chr_1$X0.03384), xlab = "Base Pair", ylab = "P-Value", pch = 19, col = chr_1$X1)
+        title (main = "Chromosome 1")
+        abline(h=8)
+ 
+        plot (chr_2$X10554, -log(chr_2$X0.5312), xlab = "Base Pair", ylab = "P-Value", pch = 19, col = chr_2$X2)
+        title (main = "Chromosome 2")
+        abline(h=8)
+ 
+        plot (chr_3$X60197, -log(chr_3$X0.273424315413), xlab = "Base Pair", ylab = "P-Value", pch = 19, col = chr_3$X3)
+        title (main = "Chromosome 3")
+        abline(h=8)
+ 
+        plot (chr_4$X68507, -log(chr_4$X0.4158), xlab = "Base Pair", ylab = "P-Value", pch = 19, col = chr_4$X4)
+        title (main = "Chromosome 4")
+        abline(h=8)
+ 
+        plot (chr_5$X11566, -log(chr_5$X0.3945), xlab = "Base Pair", ylab = "P-Value", pch = 19, col = chr_5$X5)
+        title (main = "Chromosome 5")
+        abline(h=8)
+ 
+        plot (chr_6$X63979, -log(chr_6$X0.3505), xlab = "Base Pair", ylab = "P-Value", pch = 19, col = chr_6$X6)
+        title (main = "Chromosome 6")
+        abline(h=8)
+ 
+        plot (chr_7$X16864, -log(chr_7$X0.7967), xlab = "Base Pair", ylab = "P-Value", pch = 19, col = chr_7$X7)
+        title (main = "Chromosome 7")
+        abline(h=8)
+ 
+        plot (chr_8$X46198, -log(chr_8$X0.6789), xlab = "Base Pair", ylab = "P-Value", pch = 19, col = chr_8$X8)
+        title (main = "Chromosome 8")
+        abline(h=8)
+ 
+ 
+        plot (chr_9$X39486, -log(chr_9$X0.1391), xlab = "Base Pair", ylab = "P-Value", pch = 19, col = chr_9$X9)
+        title (main = "Chromosome 9")
+        abline(h=8)
+ 
+        plot (chr_10$X60684, -log(chr_10$X0.1201), xlab = "Base Pair", ylab = "P-Value", pch = 19, col = chr_10$X10)
+        title (main = "Chromosome 10")
+        abline(h=8)
+ 
+        plot (chr_11$X131128, -log(chr_11$X0.8644), xlab = "Base Pair", ylab = "P-Value", pch = 19, col = chr_11$X11)
+        title (main = "Chromosome 11")
+        abline(h=8)
+ 
+        plot (chr_12$X131128, -log(chr_12$X0.8644), xlab = "Base Pair", ylab = "P-Value", pch = 19, col = chr_12$X12)
+        title (main = "Chromosome 12")
+        abline(h=8)
+ 
+        plot (chr_13$X19020095, -log(chr_13$X0.6206), xlab = "Base Pair", ylab = "P-Value", pch = 19, col = chr_13$X13)
+        title (main = "Chromosome 13")
+        abline(h=8)
+ 
+        plot (chr_14$X19161529, -log(chr_14$X0.5313), xlab = "Base Pair", ylab = "P-Value", pch = 19, col = chr_14$X14)
+        title (main = "Chromosome 14")
+        abline(h=8)
+ 
+        plot (chr_15$X20001226, -log(chr_15$X0.962), xlab = "Base Pair", ylab = "P-Value", pch = 19, col = chr_15$X15)
+        title (main = "Chromosome 15")
+        abline(h=8)
+
+        plot (chr_16$X60291, -log(chr_16$X0.3721), xlab = "Base Pair", ylab = "P-Value", pch = 19, col = chr_16$X16)
+        title (main = "Chromosome 16")
+        abline(h=8)
+ 
+        plot (chr_17$X828, -log(chr_17$X0.560497650809), xlab = "Base Pair", ylab = "P-Value", pch = 19, col = chr_17$X17)
+        title (main = "Chromosome 17")
+        abline(h=8)
+
+        plot (chr_18$X11275, -log(chr_18$X0.8782), xlab = "Base Pair", ylab = "P-Value", pch = 19, col = chr_18$X18)
+        title (main = "Chromosome 18")
+        abline(h=8)
+
+        plot (chr_19$X212785, -log(chr_19$X0.5404), xlab = "Base Pair", ylab = "P-Value", pch = 19, col = chr_19$X19)title (main = "Chromosome 19")
+        title (main = "Chromosome 19")
+        abline(h=8)
+ 
+        plot (chr_20$X61098, -log(chr_20$X0.359574944108), xlab = "Base Pair", ylab = "P-Value", pch = 19, col = chr_20$X20)
+        title (main = "Chromosome 20")
+        abline(h=8)
+
+        plot (chr_21$X10401645, -log(chr_21$X0.3945), xlab = "Base Pair", ylab = "P-Value", pch = 19, col = chr_21$X21)
+        title (main = "Chromosome 21")
+        abline(h=8)
+
+        plot (chr_22$X16495833, -log(chr_22$X0.6737), xlab = "Base Pair", ylab = "P-Value", pch = 19, col = chr_22$X22)
+        title (main = "Chromosome 22")
+        abline(h=8)
+
+    We ran our analysis on a MAC laptop in order to download all files and run all commands
+
+    An issue we ran into was the stats file we downloaded was 13 million sequences long. Therefore the file was too large to separate by chromosome on Rstudio and we had to individually separate each chromosome out on VS code (commands shown above). Another problem was even after uploading the files into Rstudio it would take an extended amount of time for the command to run due to the size of the file.
+
 Findings
-  To add a plot from the 'figs' folder, there needs to be a line in this document that looks like this:
