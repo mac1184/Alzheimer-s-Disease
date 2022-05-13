@@ -107,9 +107,9 @@ Methods
         title (main = "Chromosome 22")
         abline(h=8)
 
-    We ran our analysis on a MAC laptop in order to download all files and run all commands.
+    The analysis was run on a MAC laptop in order to download all files and run all commands.
 
-    An issue we ran into was the summary statistical file we downloaded was 13 million sequences long. Therefore, the file was too large to separate by chromosome on RStudio so we had to individually separate each chromosome out on VSCode (commands shown above). Another problem was even after uploading the files into RStudio, it would take an extended amount of time for the command to run due to the size of the file.
+    An issue encountered was the summary statistical file we downloaded was 13 million sequences long. Therefore, the file was too large to separate by chromosome on RStudio so we had to individually separate each chromosome out on VSCode (commands shown above). Another problem was even after uploading the files into RStudio, it would take an extended amount of time for the command to run due to the size of the file.
 
 Findings
     *Please see each uploaded chromosome figure for the Manhattan plot and figure description
