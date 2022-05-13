@@ -113,3 +113,12 @@ Methods
     An issue we ran into was the stats file we downloaded was 13 million sequences long. Therefore the file was too large to separate by chromosome on Rstudio and we had to individually separate each chromosome out on VS code (commands shown above). Another problem was even after uploading the files into Rstudio it would take an extended amount of time for the command to run due to the size of the file.
 
 Findings
+    *Please see each uploaded chromosome figure for the Manhattan plot and figure description
+    In looking for genes that correlate with the significant snips of each chromosome, the referenced paper, Janden Iris E., et al. 2019, provided a table indicatin gsignificant associated regions that are identified in the GWAS analysis of Alzheimer's disease (AD) case-control status, and AD-by-proxy phenotype and meta-analysis
+
+Sources
+  Jansen, Iris E, et al. “Genome-Wide Meta-Analysis Identifies New Loci and Functional     Pathways Influencing     Alzheimer's Disease Risk.” Nature Genetics, U.S. National     Library of Medicine, Mar. 2019,     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6836675/. ​
+  Silva, Marcos, et al. “Alzheimer's Disease: Risk Factors and Potentially Protective Measures - Journal of Biomedical Science.” BioMed Central, BioMed Central, 9     May 2019, https://jbiomedsci.biomedcentral.com/articles/10.1186/s12929-0190524- y#:~:text=Alzheimer's%20disease%20(AD)%20is%20the,as%20apathy%2C%20ag gressiveness%20and%20depression.
+
+    
+    
